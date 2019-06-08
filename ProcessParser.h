@@ -158,6 +158,12 @@ vector<string> ProcessParser::getPidList() {
     return container;
 }
 
+bool ProcessParser::isPidExisting(string pid) {
+    vector<string> pidList = ProcessParser::getPidList();
+    if (std::find(pidList.begin(), pidList.end(), pid) != pidList.end()) return true;
+    return false;
+}
+
 std::string ProcessParser::getCmd(string pid) {
     string line;
     ifstream stream = Util::getStream((Path::basePath() + pid + Path::cmdPath()));
