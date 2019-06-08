@@ -51,7 +51,7 @@ std::ifstream Util::getStream(std::string path){
     stream.open (path, std::ifstream::in);
     if (!stream && !stream.is_open()){
         stream.close();
-        throw std::runtime_error("Non-existing PID");
+        throw std::runtime_error((path + " - Non-existing PID"));
     }
     return stream;
 }
