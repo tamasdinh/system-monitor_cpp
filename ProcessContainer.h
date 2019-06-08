@@ -1,9 +1,11 @@
 #include "Process.h"
 #include <vector>
+
 class ProcessContainer{
 
 private:
-    std::vector<Process>_list;
+    std::vector<Process> _list;
+
 public:
     ProcessContainer(){
         this->refreshList();

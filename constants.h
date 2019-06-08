@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 using namespace std;
 
@@ -14,7 +16,7 @@ enum CPUStates{
 	S_GUEST_NICE
 };
 
-class Path{
+class Path {
 
 public:
     static string basePath() {
